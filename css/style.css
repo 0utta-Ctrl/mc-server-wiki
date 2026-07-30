@@ -106,7 +106,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image: var(--dirt-texture);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-size: cover;
   background-attachment: fixed;
   image-rendering: pixelated;
