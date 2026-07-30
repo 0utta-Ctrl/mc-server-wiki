@@ -106,7 +106,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image: var(--dirt-texture);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: 360px 225px;
   image-rendering: pixelated;
 }
@@ -314,7 +314,7 @@ table { border-collapse: collapse; width: 100%; }
 }
 .source-badge.modrinth { background: #1bd96a33; color: #1bd96a; border: 1px solid #1bd96a55; }
 [data-theme="light"] .source-badge.modrinth { color: #157a3f; background: #d3f5e2; border-color: #9ee0bd; }
-.source-badge.curseforge { background: #f16436_33; color: #f16436; border: 1px solid #f1643655; }
+.source-badge.curseforge { background: #f1643633; color: #f16436; border: 1px solid #f1643655; }
 [data-theme="light"] .source-badge.curseforge { color: #b8410f; background: #ffe2d5; border-color: #f7ac8f; }
 
 .empty-state { text-align: center; padding: var(--space-16) var(--space-8); color: var(--color-text-muted); }
