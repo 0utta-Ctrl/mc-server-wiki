@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mod List · Blockcraft Forge Wiki</title>
+<meta name="description" content="Full list of mods running on the server with links to Modrinth and CurseForge.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3Crect x=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect x=%2720%27 y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+  <div class="page-wrap">
+    <div class="site-panel">
+      <header class="site-header">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" fill="#5a3a22"/>
+            <rect x="18" y="2" width="14" height="14" fill="#6fa84a"/>
+            <rect x="2" y="18" width="14" height="14" fill="#6fa84a"/>
+            <rect x="18" y="18" width="14" height="14" fill="#5a3a22"/>
+            <rect x="2" y="2" width="30" height="30" fill="none" stroke="#3a2410" stroke-width="2"/>
+          </svg>
+          <span class="brand-name">Blockcraft Forge</span>
+        </div>
+        <button class="mobile-nav-toggle" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+        <nav class="main-nav" data-main-nav aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="mods.html" aria-current="page">Mod List</a>
+          <a href="install.html">Installation</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"></button>
+      </header>
+      <div class="site-body">
+
+<main id="main">
+<section class="hero" style="padding-block: var(--space-4); margin-bottom: var(--space-6);">
+  <h1 style="font-size: var(--text-lg);">Mod List</h1>
+  <p style="font-size: var(--text-base);">All 139 mods running on the server, sorted alphabetically. Click through to each mod's official page &mdash; most link out to their wiki, changelog, and documentation.</p>
+</section>
+
+<div class="mod-toolbar">
+  <input type="search" id="mod-search" class="mod-search" placeholder="Search mods by name&hellip;" aria-label="Search mods">
+  <div class="mod-filter-group" role="group" aria-label="Filter by source">
+    <button class="filter-chip" data-source="all" aria-pressed="true">All Sources</button>
+    <button class="filter-chip" data-source="modrinth" aria-pressed="false">Modrinth</button>
+    <button class="filter-chip" data-source="curseforge" aria-pressed="false">CurseForge</button>
+  </div>
+</div>
+
+<p class="mod-count" id="mod-count"></p>
+
+<div class="mod-table-wrap">
+  <table class="mod-table">
+    <thead>
+      <tr>
+        <th scope="col">Mod Name</th>
+        <th scope="col">Source</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody id="mod-tbody"></tbody>
+  </table>
+  <div class="empty-state" id="mod-empty" hidden>
+    <p>No mods match your search. Try a different name or clear the filter.</p>
+  </div>
+</div>
+
+</main>
+      </div>
+      <footer class="site-footer">
+        <p>Community wiki for the Blockcraft Forge modded Minecraft server &middot; Not affiliated with Mojang or Microsoft.</p>
+      </footer>
+    </div>
+  </div>
+
+<script src="js/main.js"></script>
+<script src="mods_data.js"></script>
+<script src="js/mods.js"></script>
+</body>
+</html>
