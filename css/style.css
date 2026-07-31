@@ -55,7 +55,8 @@
   --shadow-md: 0 4px 14px rgba(30, 20, 5, 0.35);
   --shadow-lg: 0 12px 32px rgba(20, 12, 2, 0.5);
 
-  --dirt-texture: url('../assets/img/dirt_background.jpg');
+  --dirt-texture: url('../assets/img/dirt_texture.png');
+  --dirt-size: 64px 64px;
   --panel-border-img: none;
 }
 
@@ -89,6 +90,7 @@
   --shadow-lg: 0 12px 32px rgba(0,0,0,0.6);
 
   --dirt-texture: url('../assets/img/dirt_dark.jpg');
+  --dirt-size: 720px 450px;
 }
 
 html {
@@ -106,10 +108,27 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image: var(--dirt-texture);
-  background-repeat: repeat-x;
-  background-size: 360px 225px;
-  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: var(--dirt-size);
   image-rendering: pixelated;
+}
+
+/* Grass overlay fixed at the top edge */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background-image: url('../assets/img/grass_side_texture2.png');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  image-rendering: pixelated;
+  z-index: 1;
+  pointer-events: none;
+}
+
+[data-theme="dark"] body::before {
+  display: none; /* Hide grass overlay in dark mode */;
 }
 
 img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
