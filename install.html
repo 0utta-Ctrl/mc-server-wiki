@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Installation Guide · ZCraft Wiki</title>
-<meta name="description" content="Step-by-step guide to installing the modpack and connecting to the server.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3Crect x=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect x=%2720%27 y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3C/svg%3E">
-<script>
-  (function () {
-    var saved = localStorage.getItem('theme');
-    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = saved ? saved : (systemDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-  })();
-</script>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation Guide · ZCraft Wiki</title>
+  <meta name="description"
+    content="Step-by-step guide to purchasing Minecraft, installing Prism Launcher, importing the modpack, and joining the server.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3Crect x=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%236fa84a%27/%3E%3Crect x=%2720%27 y=%2720%27 width=%2720%27 height=%2720%27 fill=%27%235a3a22%27/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved ? saved : (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=1.1">
 </head>
+
 <body>
-<a class="sr-only" href="#main">Skip to content</a>
+  <a class="sr-only" href="#main">Skip to content</a>
   <div class="page-wrap">
     <div class="site-panel">
       <header class="site-header">
         <div class="brand">
           <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="14" height="14" fill="#5a3a22"/>
-            <rect x="18" y="2" width="14" height="14" fill="#6fa84a"/>
-            <rect x="2" y="18" width="14" height="14" fill="#6fa84a"/>
-            <rect x="18" y="18" width="14" height="14" fill="#5a3a22"/>
-            <rect x="2" y="2" width="30" height="30" fill="none" stroke="#3a2410" stroke-width="2"/>
+            <rect x="2" y="2" width="14" height="14" fill="#5a3a22" />
+            <rect x="18" y="2" width="14" height="14" fill="#6fa84a" />
+            <rect x="2" y="18" width="14" height="14" fill="#6fa84a" />
+            <rect x="18" y="18" width="14" height="14" fill="#5a3a22" />
+            <rect x="2" y="2" width="30" height="30" fill="none" stroke="#3a2410" stroke-width="2" />
           </svg>
           <span class="brand-name">ZCraft</span>
         </div>
         <button class="mobile-nav-toggle" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
         </button>
         <nav class="main-nav" data-main-nav aria-label="Primary">
           <a href="index.html">Home</a>
@@ -45,86 +51,216 @@
       </header>
       <div class="site-body">
 
-<main id="main">
-<section class="hero" style="padding-block: var(--space-4); margin-bottom: var(--space-6);">
-  <h1 style="font-size: var(--text-lg);">Installation Guide</h1>
-  <p style="font-size: var(--text-base);">Get the modpack installed and connected to the server using the Prism Launcher (also works with the Modrinth App).</p>
-</section>
+        <main id="main">
+          <section class="hero" style="padding-block: var(--space-4); margin-bottom: var(--space-6);">
+            <h1 style="font-size: var(--text-lg);">Installation Guide</h1>
+            <p style="font-size: var(--text-base);">Follow this walkthrough to buy Minecraft, set up Prism Launcher,
+              import the server modpack, and join the game.</p>
+          </section>
 
-<div class="callout">
-  <strong>Before you start:</strong> Make sure you have a valid Minecraft Java Edition account and at least 4&ndash;6 GB of RAM allocated for smooth performance with this many mods.
-</div>
+          <div class="callout">
+            <strong>Already own Minecraft Java Edition?</strong> If you already own a paid copy of Minecraft Java
+            Edition and have launched the game at least once before, you can skip straight to <strong>Step 3</strong>!
+          </div>
 
-<div class="step-list">
-  <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-body">
-      <h3>Install Prism Launcher</h3>
-      <p>Download and install <a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Prism Launcher</a> for your operating system (Windows, macOS, or Linux). Prism is a free, open-source launcher that manages Forge versions and mods automatically.</p>
-    </div>
-  </div>
+          <div class="step-list">
 
-  <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-body">
-      <h3>Create a New Instance</h3>
-      <p>Open Prism, click <code>Add Instance</code>, and select the correct Minecraft version and Forge loader version for this pack (see the pinned announcement in Discord for the exact version numbers).</p>
-    </div>
-  </div>
+            <!-- Step 1: Purchasing Minecraft -->
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Buy Minecraft Java Edition</h3>
+                <p>Go to <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc"
+                    target="_blank" rel="noopener noreferrer">minecraft.net</a> and purchase <strong>Minecraft: Java
+                    &amp; Bedrock Edition for PC</strong>.</p>
+                <ul>
+                  <li>Buy the <strong>Standard Edition</strong>. You do <em>not</em> need the Deluxe or Ultimate
+                    collections (they only contain extra cosmetic Minecoins for Bedrock edition).</li>
+                  <li>Make sure you sign in with the <strong>Microsoft Account</strong> you plan to use for playing on
+                    the server.</li>
+                </ul>
+              </div>
+            </div>
 
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-body">
-      <h3>Import the Modpack (Recommended)</h3>
-      <p>If a <code>.mrpack</code> export is provided by the server admin, use Prism's <code>Add Instance &rarr; Import</code> option and select the file. This automatically downloads all 139 mods with the correct versions.</p>
-      <ul>
-        <li>If no pack file is provided, manually download each mod from the <a href="mods.html">Mod List</a> page, matching the exact Minecraft and Forge versions.</li>
-        <li>Place downloaded <code>.jar</code> files into your instance's <code>mods</code> folder.</li>
-      </ul>
-    </div>
-  </div>
+            <!-- Step 2: First Time Official Launcher Setup -->
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Install &amp; Run Official Minecraft Launcher (First Time Only)</h3>
+                <p>Download and install the official <strong>Minecraft Launcher</strong> from minecraft.net or the
+                  Microsoft Store.</p>
+                <ul>
+                  <li>Open the official launcher and log in using your Microsoft account.</li>
+                  <li>Click <strong>Play</strong> to launch standard (vanilla) Minecraft at least once, until you reach
+                    the main game menu.</li>
+                  <li><strong>Why this is important:</strong> Running the game once creates essential local files,
+                    verifies your game license on your computer, and initializes required libraries.</li>
+                  <li>Once the main menu loads, exit Minecraft and close the official launcher completely.</li>
+                </ul>
+              </div>
+            </div>
 
-  <div class="step">
-    <div class="step-num">4</div>
-    <div class="step-body">
-      <h3>Allocate Memory</h3>
-      <p>In the instance settings, go to <code>Java</code> and set the minimum/maximum memory to at least <code>4096</code>&ndash;<code>6144</code> MB depending on your system's available RAM.</p>
-    </div>
-  </div>
+            <!-- Step 3: Install Prism Launcher -->
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Download &amp; Install Prism Launcher</h3>
+                <p>Go to <a href="https://prismlauncher.org/download/" target="_blank"
+                    rel="noopener noreferrer">prismlauncher.org/download</a> and grab the installer for your operating
+                  system (Windows, macOS, or Linux).</p>
+                <ul>
+                  <li>Install and launch Prism. When prompted during initial setup, sign in with your <strong>Microsoft
+                      Account</strong> that owns Minecraft.</li>
+                  <li>Prism is a free, open-source launcher that manages custom modpacks and Forge versions
+                    automatically.</li>
+                </ul>
+              </div>
+            </div>
 
-  <div class="step">
-    <div class="step-num">5</div>
-    <div class="step-body">
-      <h3>Launch and Verify</h3>
-      <p>Start the instance. On first launch, mod loading may take a few minutes as Forge indexes all mods. If you see a crash report, check the <a href="faq.html">FAQ</a> for common fixes.</p>
-    </div>
-  </div>
+            <!-- Step 4: Download Modpack File -->
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <h3>Download the Modpack File</h3>
+                <p>Download the official server modpack archive directly from our wiki:</p>
+            
+                <p style="margin-block: var(--space-3);">
+                  <a href="assets/ZCraft.zip" download class="btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Modpack (.zip)
+                  </a>
+                </p>
+            
+                <ul>
+                  <li><strong>Important:</strong> Do <em>not</em> unzip or extract the file after downloading. Prism Launcher reads
+                    the <code>.zip</code> archive directly.</li>
+                  <li>Save the file somewhere easy to locate, like your <code>Downloads</code> folder.</li>
+                </ul>
+              </div>
+            </div>
 
-  <div class="step">
-    <div class="step-num">6</div>
-    <div class="step-body">
-      <h3>Connect to the Server</h3>
-      <p>From the Multiplayer menu, click <code>Add Server</code> and enter the server address provided by the admin team. Join and enjoy!</p>
-    </div>
-  </div>
-</div>
+            <!-- Step 5: Import Instance -->
+            <div class="step">
+              <div class="step-num">5</div>
+              <div class="step-body">
+                <h3>Import Modpack into Prism Launcher</h3>
+                <p>In Prism Launcher, click <strong>Add Instance</strong> in the top toolbar.</p>
+                <ul>
+                  <li>In the window that opens, select the <strong>Import</strong> tab on the left sidebar (rather than
+                    CurseForge or Modrinth).</li>
+                  <li>Click the folder icon, navigate to your <code>Downloads</code> folder, and select the modpack
+                    <code>.zip</code> file you downloaded.</li>
+                  <li>Give it a name (e.g. <code>ZCraft Server</code>) and click <strong>OK</strong>. Prism
+                    will automatically configure the correct Minecraft version, Forge loader, and download all required
+                    mods.</li>
+                </ul>
+              </div>
+            </div>
 
-<section>
-  <h2>Recommended Client Mods</h2>
-  <div class="prose">
-    <p>These aren't required but improve your experience: <strong>Sodium</strong> and <strong>Iris</strong> for performance and shader support, <strong>Jade</strong> for block/entity info, and <strong>Xaero's Minimap</strong> for navigation. All are already included in the server's mod list.</p>
-  </div>
-</section>
+            <!-- Step 6: Memory Allocation -->
+            <div class="step">
+              <div class="step-num">6</div>
+              <div class="step-body">
+                <h3>Allocate RAM Memory</h3>
+                <p>Right-click your newly created instance in Prism Launcher and select <strong>Edit</strong>.</p>
+                <ul>
+                  <li>Navigate to <strong>Settings &rarr; Java</strong> on the left sidebar.</li>
+                  <li>Check the box for <strong>Memory</strong> and set both Minimum and Maximum RAM to at least
+                    <code>4096</code>&ndash;<code>6144</code> MB (4&ndash;6 GB) for smooth performance with 130+ mods.
+                  </li>
+                  <li>Click <strong>Close</strong>.</li>
+                </ul>
+              </div>
+            </div>
 
-</main>
+            <!-- Step 7: Whitelist & Server Join -->
+            <div class="step">
+              <div class="step-num">7</div>
+              <div class="step-body">
+                <h3>Get Whitelisted &amp; Connect to the Server</h3>
+                <p>Send your exact <strong>Minecraft Username</strong> to the server admin team so you can be added to
+                  the whitelist.</p>
+                <ul>
+                  <li>Double-click your instance in Prism Launcher to start Minecraft (first launch may take 2&ndash;3
+                    minutes as Forge indexes all mods).</li>
+                  <li>From the main menu, click <strong>Multiplayer &rarr; Add Server</strong>.</li>
+                  <li>Enter the server address provided by the admin team, click <strong>Done</strong>, and double-click
+                    the server to join!</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Modpack Features Overview -->
+          <section style="margin-top: var(--space-10);">
+            <h2>What to Expect in This Modpack</h2>
+            <p style="margin-bottom: var(--space-4); color: var(--color-text-muted);">Here is a quick overview of the
+              main features installed on the server:</p>
+
+            <div class="card-grid">
+              <div class="card">
+                <h3>🗺️ Adventuring &amp; Caving</h3>
+                <p>Overhauled terrain with Tectonic, expanded caves, revamped structures (Temples, Mineshafts,
+                  Strongholds, Nether Fortresses), Sophisticated Backpacks for hauling loot, and The Aether dimension.
+                </p>
+              </div>
+
+              <div class="card">
+                <h3>🌾 Trading &amp; Farming</h3>
+                <p>Animal Husbandry, Village Bounties, Trade Cycling, Farmer's Delight crops and cooking, Productive
+                  Bees, and Industrial Foregoing automation.</p>
+              </div>
+
+              <div class="card">
+                <h3>🏠 Building &amp; Decor</h3>
+                <p>Chipped and Chiseled add hundreds of new decorative block variants, while Supplementaries adds
+                  lanterns, shelves, and fine architectural details.</p>
+              </div>
+
+              <div class="card">
+                <h3>⚙️ Technology &amp; Storage</h3>
+                <p>Mekanism provides full tech progression and processing, while Refined Storage lets you store and
+                  search all your items in a single digital network.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Quality of Life Callout -->
+          <section style="margin-top: var(--space-8);">
+            <h2>Quality of Life Features</h2>
+            <div class="prose">
+              <ul>
+                <li><strong>Simple Voice Chat:</strong> Proximity voice chat active right when you join—just plug in a
+                  microphone!</li>
+                <li><strong>JEI (Just Enough Items):</strong> Search recipes, crafts, and item uses directly inside your
+                  inventory menu.</li>
+                <li><strong>Xaero's Minimap &amp; World Map:</strong> Live map overlay with waypoint markers and death
+                  points.</li>
+                <li><strong>Waystones:</strong> Fast travel between discovered waypoints across the world.</li>
+                <li><strong>Charm of Undying:</strong> Keep your Totem of Undying equipped in a dedicated accessory
+                  slot.</li>
+                <li><strong>Crafting on a Stick &amp; Client Sort:</strong> Instant inventory sorting and crafting
+                  without placing tables down.</li>
+              </ul>
+            </div>
+          </section>
+
+        </main>
       </div>
       <footer class="site-footer">
-        <p>Community wiki for the ZCraft modded Minecraft server &middot; Not affiliated with Mojang or Microsoft.</p>
+        <p>Community wiki for the ZCraft modded Minecraft server &middot; Not affiliated with Mojang or
+          Microsoft.</p>
       </footer>
     </div>
   </div>
 
-<script src="js/main.js"></script>
-
+  <script src="js/main.js?v=1.1"></script>
 </body>
+
 </html>
