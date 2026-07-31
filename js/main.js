@@ -1,7 +1,11 @@
 (function () {
   var toggle = document.querySelector('[data-theme-toggle]');
   var root = document.documentElement;
-  var mode = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+
+  var savedTheme = localStorage.getItem('theme');
+  var systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  var mode = savedTheme ? savedTheme : (systemDark ? 'dark' : 'light');
+
   root.setAttribute('data-theme', mode);
   function setIcon() {
     if (!toggle) return;
@@ -14,6 +18,7 @@
     toggle.addEventListener('click', function () {
       mode = mode === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', mode);
+      localStorage.setItem('theme', mode);
       setIcon();
       toggle.setAttribute('aria-label', 'Switch to ' + (mode === 'dark' ? 'light' : 'dark') + ' mode');
     });
