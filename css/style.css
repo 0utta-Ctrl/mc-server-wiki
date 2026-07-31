@@ -753,3 +753,153 @@ section>h2 {
     position: relative;
   }
 }
+
+/* ===== Interactive Keyboard Layout ===== */
+.controls-layout {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(280px, 340px);
+  gap: var(--space-4);
+  align-items: start;
+  margin-block: var(--space-4);
+}
+
+.keyboard-board-wrap {
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  -webkit-overflow-scrolling: touch;
+}
+
+.keyboard-board {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--color-surface-offset);
+  padding: 10px;
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-md);
+  user-select: none;
+  width: fit-content;
+}
+
+.kb-row {
+  display: flex;
+  gap: 5px;
+}
+
+.key-gap {
+  width: 14px;
+}
+
+/* Key Styling */
+.key {
+  height: 38px;
+  min-width: 38px;
+  padding: 2px 6px;
+  background: var(--color-surface-2);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: transform 100ms ease, background 100ms ease, border-color 100ms ease;
+  white-space: nowrap;
+}
+
+.key:hover {
+  background: var(--color-primary-highlight);
+  border-color: var(--color-primary);
+  color: var(--color-primary-active);
+  transform: translateY(-2px);
+}
+
+.key.has-binding {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-primary) 15%, var(--color-surface-2));
+}
+
+.key.key-active {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border-color: var(--color-primary-hover) !important;
+  transform: translateY(1px);
+}
+
+/* Key Width Utilities */
+.key-sm {
+  height: 32px;
+  font-size: 0.7rem;
+}
+
+.key-w-1-5 {
+  min-width: 56px;
+}
+
+.key-w-1-75 {
+  min-width: 66px;
+}
+
+.key-w-2 {
+  min-width: 76px;
+}
+
+.key-w-2-25 {
+  min-width: 86px;
+}
+
+.key-w-2-75 {
+  min-width: 104px;
+}
+
+.key-space {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Inspector Panel Next to Keyboard */
+.key-details-card {
+  background: var(--color-surface-2);
+  border: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  min-height: 270px;
+  max-height: 290px;
+  overflow-y: auto;
+}
+
+.key-actions-list {
+  margin-top: var(--space-2);
+  padding-left: var(--space-4);
+  list-style: disc;
+}
+
+.key-actions-list li {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-xs);
+}
+
+.key-mod-badge {
+  background: var(--color-warning);
+  color: #fff;
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+  .controls-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .key-details-card {
+    min-height: auto;
+    max-height: 250px;
+  }
+}
